@@ -26,6 +26,16 @@ export default {
         },
         secondary: '#6B7280',
       },
+      fontFamily: {
+        body: [
+          'Work Sans',
+          'Roboto',
+          '"Helvetica Neue"',
+          'Arial',
+          'sans-serif',
+        ],
+        headline: ['Montserrat', 'Arial', 'sans-serif'],
+      },
     },
   },
   plugins: [
