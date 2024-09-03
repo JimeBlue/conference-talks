@@ -1,6 +1,6 @@
 <template>
   <section class="mt-10 text-brand-500 space-y-4">
-    <h2 class="text-xl font-bold">Info page</h2>
+    <h2 class="text-xl font-bold">{{ $t('navigation.info') }}</h2>
     <p>
       Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque labore
       illo culpa natus autem doloribus magnam numquam in, sint vel reiciendis

@@ -11,8 +11,7 @@
   },
   "navigation": {
     "home": "Home",
-    "contact": "Contact",
-    "register": "Register"
+    "info": "Information"
   },
   "welcome": {
     "title": "Welcome!"

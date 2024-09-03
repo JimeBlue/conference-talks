@@ -6,9 +6,13 @@
     </h1>
 
     <UButton>
-      <NuxtLink to="/info"> Info page </NuxtLink>
+      <NuxtLink :to="localePath('info')"> {{ t('navigation.info') }} </NuxtLink>
     </UButton>
   </section>
 </template>
 
-<script setup></script>
+<script setup>
+const { t } = useI18n()
+
+const localePath = useLocalePath()
+</script>

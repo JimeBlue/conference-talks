@@ -11,8 +11,7 @@
   },
   "navigation": {
     "home": "Willkommen",
-    "contact": "Kontakt",
-    "register": "Anmeldung"
+    "info": "Informationen"
   },
   "welcome": {
     "title": "Willkommen!"
