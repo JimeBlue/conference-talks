@@ -1,4 +1,5 @@
 <template>
+  <SiteHero />
   <section class="mt-10">
     <div class="container">
       <h1 class="text-2xl font-bold text-brand-500">
