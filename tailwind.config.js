@@ -28,5 +28,22 @@ export default {
       },
     },
   },
-  plugins: [],
+  plugins: [
+    ({ addComponents, theme }) => {
+      addComponents({
+        '.container': {
+          width: '100%',
+          marginLeft: 'auto',
+          marginRight: 'auto',
+          paddingLeft: theme('spacing.4'),
+          paddingRight: theme('spacing.4'),
+          '@screen lg': {
+            maxWidth: '1200px',
+            paddingLeft: theme('spacing.5'),
+            paddingRight: theme('spacing.5'),
+          },
+        },
+      })
+    },
+  ],
 }
