@@ -10,5 +10,29 @@ export default defineNuxtConfig({
     },
   },
 
-  modules: ['@nuxt/ui'],
+  modules: ['@nuxt/ui', '@nuxtjs/i18n'],
+  i18n: {
+    locales: [
+      {
+        name: 'English',
+        code: 'en',
+        iso: 'en-GB',
+        file: 'en.json',
+      },
+      {
+        name: 'Deutsch',
+        code: 'de',
+        iso: 'de-DE',
+        file: 'de.json',
+      },
+    ],
+    defaultLocale: 'en',
+    lazy: true,
+    langDir: 'i18n',
+    strategy: 'prefix_except_default',
+    detectBrowserLanguage: false,
+    compilation: {
+      strictMessage: false,
+    },
+  },
 })
