@@ -6,6 +6,19 @@
         <span>{{ $t('meta.name') }}</span
         >, <span>{{ $t('welcome.title') }}</span>
       </h1>
+      <p>
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quis, et id?
+        Cum fugit sed doloremque ex officia molestiae distinctio alias dolores
+        enim earum porro voluptas, inventore impedit ut! Delectus aliquid libero
+        incidunt officiis odio, atque at architecto dolorum numquam non tempore
+        voluptatum quos velit laudantium labore. Corrupti hic sunt iste maiores
+        cum optio voluptatem possimus atque eveniet ut. Consequatur perferendis
+        rem quos ratione aperiam quia molestias dolorum laborum adipisci illum
+        omnis expedita quisquam modi vitae ab, ea perspiciatis, earum tempore
+        labore facilis quibusdam ex? Velit quis, non ducimus enim debitis
+        possimus! Dolores, illum! Nam, incidunt iure voluptatibus non nesciunt
+        odio?
+      </p>
       <NuxtLink :to="localePath('info')" class="block mt-4">
         <UButton :label="t('navigation.info')" />
       </NuxtLink>
