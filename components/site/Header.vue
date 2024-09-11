@@ -16,7 +16,7 @@
             <li v-for="{ to, label } in pages" :key="to">
               <NuxtLink
                 :to="localePath(to)"
-                class="aria-[current=page]:bg-primary block rounded-md px-4 py-1 hover:bg-gray-50 aria-[current=page]:text-white"
+                class="aria-[current=page]:text-primary hover:text-primary block rounded-md px-4 py-1 aria-[current=page]:bg-transparent aria-[current=page]:underline aria-[current=page]:underline-offset-8"
               >
                 {{ label }}
               </NuxtLink>
