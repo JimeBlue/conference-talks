@@ -16,7 +16,7 @@
             <li v-for="{ to, label } in pages" :key="to">
               <NuxtLink
                 :to="localePath(to)"
-                class="aria-[current=page]:text-primary hover:text-primary block rounded-md px-4 py-1 aria-[current=page]:bg-transparent aria-[current=page]:underline aria-[current=page]:underline-offset-8"
+                class="block rounded-md px-4 py-1 hover:text-brand-500 aria-[current=page]:bg-transparent aria-[current=page]:text-brand-500 aria-[current=page]:underline aria-[current=page]:underline-offset-8"
               >
                 {{ label }}
               </NuxtLink>
@@ -43,7 +43,7 @@
           <!-- mobile menu button  -->
           <UButton
             size="md"
-            color="primary"
+            color="brand-500"
             variant="soft"
             square
             padded
