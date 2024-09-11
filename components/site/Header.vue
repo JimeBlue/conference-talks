@@ -7,7 +7,9 @@
         class="flex flex-1 items-center gap-x-6 lg:justify-between lg:gap-x-16"
       >
         <!-- NOTE: logo -->
-        <NuxtLink :to="localePath(root)" class="flex"> LOGO </NuxtLink>
+        <NuxtLink :to="localePath(root)" class="flex">
+          <img src="/img/logo-no-background.png" alt="JimeBlue" class="w-28" />
+        </NuxtLink>
         <!-- NOTE: desktop nav -->
         <nav v-if="pages.length > 1" class="hidden lg:block">
           <ul class="flex flex-wrap gap-x-3">
@@ -85,7 +87,13 @@
         >
           <div class="flex flex-1 flex-col">
             <div class="flex h-20 items-center justify-between px-4">
-              <NuxtLink :to="localePath(root)" class="flex"> LOGO </NuxtLink>
+              <NuxtLink :to="localePath(root)" class="flex">
+                <img
+                  src="/img/logo-no-background.png"
+                  alt="JimeBlue"
+                  class="w-28"
+                />
+              </NuxtLink>
               <UButton
                 color="gray"
                 variant="soft"
