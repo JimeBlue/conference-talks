@@ -1,15 +1,12 @@
 <template>
-  <header
-    class="sticky top-0 z-40 flex w-full flex-col justify-center border-b bg-white"
-  >
+  <header class="sticky top-0 z-40 flex w-full flex-col justify-center border-b bg-white">
     <div class="container flex h-20 w-full items-center">
-      <div
-        class="flex flex-1 items-center gap-x-6 lg:justify-between lg:gap-x-16"
-      >
+      <div class="flex flex-1 items-center gap-x-6 lg:justify-between lg:gap-x-16">
         <!-- NOTE: logo -->
         <NuxtLink :to="localePath(root)" class="flex">
           <img src="/img/logo-no-background.png" alt="JimeBlue" class="w-28">
         </NuxtLink>
+
         <!-- NOTE: desktop nav -->
         <nav v-if="pages.length > 1" class="hidden lg:block">
           <ul class="flex flex-wrap gap-x-3">
@@ -23,24 +20,28 @@
             </li>
           </ul>
         </nav>
+
         <!-- NOTE: container for language switcher and mobile menu button -->
         <div class="ml-auto flex items-center gap-x-2 lg:ml-0">
-          <!-- language switcher -->
+          <!-- language switcher with 2 UButton -->
           <div class="flex gap-1">
-            <UDropdown
-              :items="localeItems"
-              :popper="{ placement: 'bottom-start' }"
+            <UButton
+              v-for="(l, index) in locales"
+              :key="l.code"
+              color="lightBlue"
+              variant="ghost"
+              size="sm"
+              :class="{ 'bg-blue-100': l.code === locale }"
+              @click="switchLocale(index)"
             >
-              <UButton
-                color="gray"
-                variant="ghost"
-                icon="heroicons:globe-alt"
-                size="sm"
-                :label="locale"
+              <UIcon
+                :name="l.code === 'en' ? 'i-circle-flags:en' : 'i-circle-flags:de'"
+                class="size-5"
               />
-            </UDropdown>
+            </UButton>
           </div>
-          <!-- mobile menu button  -->
+
+          <!-- mobile menu button -->
           <UButton
             size="md"
             color="brand-500"
@@ -51,15 +52,13 @@
             @click="menuOpen = true"
           >
             <template #leading>
-              <div
-                class="text-primary grid size-5 transform place-items-center"
-              >
+              <div class="text-primary grid size-5 transform place-items-center">
                 <span
                   aria-hidden="true"
                   class="absolute block h-0.5 w-5 transform rounded-lg bg-current transition duration-300 ease-in-out"
                   :class="{
                     'rotate-45': menuOpen,
-                    ' -translate-y-1.5': !menuOpen,
+                    '-translate-y-1.5': !menuOpen,
                   }"
                 />
                 <span
@@ -72,13 +71,14 @@
                   class="absolute block h-0.5 w-5 transform rounded-lg bg-current transition duration-300 ease-in-out"
                   :class="{
                     '-rotate-45': menuOpen,
-                    ' translate-y-1.5': !menuOpen,
+                    'translate-y-1.5': !menuOpen,
                   }"
                 />
               </div>
             </template>
           </UButton>
         </div>
+
         <!-- NOTE: mobile nav -->
         <USlideover
           v-model="menuOpen"
@@ -88,11 +88,7 @@
           <div class="flex flex-1 flex-col">
             <div class="flex h-20 items-center justify-between px-4">
               <NuxtLink :to="localePath(root)" class="flex">
-                <img
-                  src="/img/logo-no-background.png"
-                  alt="JimeBlue"
-                  class="w-28"
-                >
+                <img src="/img/logo-no-background.png" alt="JimeBlue" class="w-28">
               </NuxtLink>
               <UButton
                 color="gray"
@@ -129,7 +125,6 @@
 const { t } = useI18n()
 
 const root = '/'
-
 const localePath = useLocalePath()
 const { locale, locales } = useI18n()
 const switchLocalePath = useSwitchLocalePath()
@@ -141,10 +136,11 @@ const pages = computed(() => [
   { label: t('navigation.info'), to: '/info' },
 ])
 
-const localeItems = computed(() => {
-  const items = locales.value.map((l) => {
-    return { to: switchLocalePath(l.code), label: l.name }
-  })
-  return [items]
-})
+function switchLocale(index) {
+  const selectedLocale = locales.value[index].code
+  const newLocalePath = switchLocalePath(selectedLocale)
+
+  const router = useRouter()
+  router.push(newLocalePath)
+}
 </script>

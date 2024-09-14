@@ -52,6 +52,9 @@ export default defineAppConfig({
         gray: {
           shadow: 'shadow-none',
         },
+        lightBlue: {
+          ghost: 'text-gray-900 dark:text-white hover:bg-blue-100 dark:hover:bg-gray-900 focus-visible:ring-inset focus-visible:ring-2 focus-visible:ring-primary-500 dark:focus-visible:ring-primary-400',
+        },
       },
       variant: {
         outline: 'ring-1',
