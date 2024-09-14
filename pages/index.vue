@@ -3,10 +3,9 @@
   <section class="mt-10">
     <div class="container">
       <h1 class="text-2xl font-bold text-brand-500">
-        <span>{{ $t('meta.name') }}</span
-        >, <span>{{ $t('welcome.title') }}</span>
+        <span>{{ $t('meta.name') }}</span>, <span>{{ $t('welcome.title') }}</span>
       </h1>
-      <p>
+      <p class="mt-4">
         Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quis, et id?
         Cum fugit sed doloremque ex officia molestiae distinctio alias dolores
         enim earum porro voluptas, inventore impedit ut! Delectus aliquid libero
@@ -19,7 +18,7 @@
         possimus! Dolores, illum! Nam, incidunt iure voluptatibus non nesciunt
         odio?
       </p>
-      <NuxtLink :to="localePath('info')" class="block mt-4">
+      <NuxtLink :to="localePath('info')" class="mt-4 block">
         <UButton :label="t('navigation.info')" />
       </NuxtLink>
     </div>
