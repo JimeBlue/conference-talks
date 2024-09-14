@@ -6,9 +6,9 @@
     <img
       class="pointer-events-none absolute inset-0 size-full select-none object-cover object-center"
       :src="props.image"
-      alt=""
-    />
-    <div class="bg-primary-950/75 relative z-10 flex size-full flex-1 flex-col">
+      alt="Basic boilerplate"
+    >
+    <div class=" relative z-10 flex size-full flex-1 flex-col">
       <div class="container mx-auto flex h-full flex-1 items-center py-6">
         <div class="max-w-xl text-white">
           <h1 class="text-3xl font-bold capitalize xl:text-4xl">
