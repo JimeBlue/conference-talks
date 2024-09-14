@@ -8,7 +8,7 @@
       >
         <!-- NOTE: logo -->
         <NuxtLink :to="localePath(root)" class="flex">
-          <img src="/img/logo-no-background.png" alt="JimeBlue" class="w-28" />
+          <img src="/img/logo-no-background.png" alt="JimeBlue" class="w-28">
         </NuxtLink>
         <!-- NOTE: desktop nav -->
         <nav v-if="pages.length > 1" class="hidden lg:block">
@@ -92,7 +92,7 @@
                   src="/img/logo-no-background.png"
                   alt="JimeBlue"
                   class="w-28"
-                />
+                >
               </NuxtLink>
               <UButton
                 color="gray"

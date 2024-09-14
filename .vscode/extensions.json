@@ -1,0 +1,9 @@
+{
+  "recommendations": [
+    "antfu.iconify",
+    "antfu.goto-alias",
+    "lokalise.i18n-ally",
+    "Nuxtr.nuxtr-vscode",
+    "vue.volar"
+  ]
+}

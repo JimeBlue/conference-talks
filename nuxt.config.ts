@@ -24,7 +24,7 @@ export default defineNuxtConfig({
     },
   },
 
-  modules: ['@nuxt/ui', '@nuxtjs/i18n', 'nuxt-svgo', 'nuxt-headlessui'],
+  modules: ['@nuxt/ui', '@nuxtjs/i18n', 'nuxt-svgo', 'nuxt-headlessui', 'nuxt-lodash'],
   i18n: {
     locales: [
       {

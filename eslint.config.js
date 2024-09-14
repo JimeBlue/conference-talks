@@ -15,14 +15,8 @@ export default antfu(
     vue: {
       overrides: {
         'vue/operator-linebreak': ['error', 'before'],
-        'vue/block-order': [
-          'error',
-          { order: ['template', 'script', 'style'] },
-        ],
-        'vue/max-attributes-per-line': [
-          'error',
-          { singleline: 3, multiline: 1 },
-        ],
+        'vue/block-order': ['error', { order: ['template', 'script', 'style'] }],
+        'vue/max-attributes-per-line': ['error', { singleline: 3, multiline: 1 }],
       },
     },
     // javascript: {
