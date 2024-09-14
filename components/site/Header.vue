@@ -44,7 +44,7 @@
           <!-- mobile menu button -->
           <UButton
             size="md"
-            color="brand-500"
+            color="white"
             variant="soft"
             square
             padded
