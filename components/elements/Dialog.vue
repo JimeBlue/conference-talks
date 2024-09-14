@@ -24,24 +24,32 @@
           leave-to="opacity-0 scale-95"
         >
           <HeadlessDialogPanel
-            class="max-w-lg w-full bg-white p-6 rounded-lg shadow-lg"
+            class="w-full max-w-lg rounded-lg bg-white p-6 shadow-lg"
           >
-            <HeadlessDialogTitle class="text-lg font-semibold text-gray-900">
-              <slot name="title" />
-            </HeadlessDialogTitle>
+            <div class="flex items-center justify-between">
+              <HeadlessDialogTitle class="text-lg font-semibold text-gray-900">
+                <slot name="title" />
+              </HeadlessDialogTitle>
+              <div class="flex justify-end">
+                <button
+                  type="button"
+                  class="rounded bg-transparent px-4 py-2 "
+                  @click="closeDialog"
+                >
+                  <UButton
+                    color="gray"
+                    variant="soft"
+                    size="sm"
+                    icon="i-heroicons-x-mark-20-solid"
+                    square
+                    padded
+                  />
+                </button>
+              </div>
+            </div>
 
             <div class="mt-4">
               <slot />
-            </div>
-
-            <div class="mt-6 flex justify-end">
-              <button
-                type="button"
-                class="px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-700"
-                @click="closeDialog"
-              >
-                Close
-              </button>
             </div>
           </HeadlessDialogPanel>
         </HeadlessTransitionChild>
@@ -51,13 +59,13 @@
 </template>
 
 <script setup>
-import { ref, defineProps, defineEmits } from 'vue'
+import { defineEmits, defineProps, ref } from 'vue'
 import {
   Dialog as HeadlessDialog,
   DialogPanel as HeadlessDialogPanel,
   DialogTitle as HeadlessDialogTitle,
-  TransitionRoot as HeadlessTransitionRoot,
   TransitionChild as HeadlessTransitionChild,
+  TransitionRoot as HeadlessTransitionRoot,
 } from '@headlessui/vue'
 
 const props = defineProps({

@@ -5,18 +5,21 @@
         to="https://ui.nuxt.com/"
         target="_blank"
         rel="noopener"
-        class="hover:opacity-50 transition-all"
+        class="transition-all hover:opacity-50"
       >
         {{ $t('footer.imprint') }}
       </NuxtLink>
-      <div>
-        <button @click="openDialog">{{ $t('footer.data_privacy') }}</button>
 
-        <ElementsDialog :isOpen="isDialogOpen" @close="closeDialog">
-          <template #title> Dialog Title </template>
-          This is the content of the dialog.
-        </ElementsDialog>
-      </div>
+      <button type="button" class="transition-all hover:opacity-50" @click="openDialog">
+        {{ $t('footer.data_privacy') }}
+      </button>
+
+      <ElementsDialog :is-open="isDialogOpen" @close="closeDialog">
+        <template #title>
+          {{ $t('footer.data_privacy') }}
+        </template>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit quia ratione amet exercitationem nesciunt quam ipsa laudantium iure, alias et.
+      </ElementsDialog>
     </div>
   </footer>
 </template>
