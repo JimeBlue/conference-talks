@@ -11,7 +11,14 @@ export default defineNuxtConfig({
       meta: [
         { charset: 'utf-8' },
         { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-        { hid: 'description', name: 'description', content: '' },
+        { hid: 'description', name: 'description', content: 'A simple Nuxt 3 boilerplate for basic projects.' },
+        { hid: 'keywords', name: 'keywords', content: 'Nuxt 3, boilerplate, web development, Tailwind CSS, Nuxt UI' },
+        { hid: 'author', name: 'author', content: 'Jimena Miguez' },
+        { name: 'robots', content: 'index, follow' },
+        { name: 'og:title', content: 'JimeBlue-boilerplate-basic' },
+        { name: 'og:description', content: 'A simple Nuxt 3 boilerplate for basic projects.' },
+        { name: 'og:image', content: '/og-image.png' }, // Add an Open Graph image
+        { name: 'og:url', content: 'https://yourwebsite.com' }, // Update with the correct URL
       ],
       link: [{ rel: 'icon', type: 'image/png', href: '/favicon.png' }],
     },
