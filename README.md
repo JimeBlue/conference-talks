@@ -1,75 +1,76 @@
-# Nuxt 3 Minimal Starter
+# JimeBlue Boilerplate - Basic
 
-Look at the [Nuxt 3 documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
+Welcome to the JimeBlue Boilerplate - Basic, a streamlined and efficient starter template for building client-side rendered (CSR) applications with Nuxt 3. This boilerplate is designed with simplicity in mind, featuring powerful tools that accelerate your development workflow.
 
-## Setup
+## Features
+
+- **Nuxt 3**: Built with the latest Nuxt framework, leveraging the power of the Composition API.
+- **Client-Side Rendering (CSR)**: Optimized for front-end rendering, ensuring a fast and dynamic user experience.
+- **Nuxt UI**: Integrated with Nuxt UI for beautiful, ready-to-use components.
+- **Tailwind CSS**: Styled with Tailwind CSS for modern, utility-first design.
+- **Nuxt HeadlessUI Dialog**: Includes a dialog component using Nuxt HeadlessUI for accessible UI elements.
+
+## Getting Started
+
+### Prerequisites
+
+Make sure you have the following installed on your machine:
+
+- [Node.js](https://nodejs.org/) (version 16.x or later)
+- [Yarn](https://yarnpkg.com/) or [npm](https://www.npmjs.com/)
+
+### Installation
+
+Clone this repository and install dependencies:
 
 Make sure to install the dependencies:
 
 ```bash
-# npm
-npm install
-
-# pnpm
-pnpm install
-
-# yarn
+git clone https://your-repo-url.git
+cd jimeblue-boilerplate-basic
 yarn install
 
-# bun
-bun install
+# or
+npm install
 ```
 
-## Development Server
+## Running the Development Server
 
-Start the development server on `http://localhost:3000`:
+To start the development server, run:
 
 ```bash
-# npm
-npm run dev
-
-# pnpm
-pnpm run dev
-
-# yarn
 yarn dev
 
-# bun
-bun run dev
+# or
+
+npm run dev
 ```
 
-## Production
+The app will be available at `http://localhost:3000.`
 
-Build the application for production:
+## Building for Production
+
+To build the project for production:
 
 ```bash
-# npm
+yarn build
+# or
 npm run build
 
-# pnpm
-pnpm run build
-
-# yarn
-yarn build
-
-# bun
-bun run build
 ```
 
-Locally preview production build:
+The production-ready files will be in the .output folder.
 
-```bash
-# npm
-npm run preview
+## Customization
 
-# pnpm
-pnpm run preview
+### Nuxt HeadlessUI Dialog
 
-# yarn
-yarn preview
+This boilerplate includes a modal/dialog component using Nuxt HeadlessUI. To customize the dialog, you can find the component in the components/ folder.
 
-# bun
-bun run preview
-```
+### Tailwind CSS
 
-Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
+Tailwind is already configured in the project. You can modify the tailwind.config.js to adjust theme settings, breakpoints, and more.
+
+### Nuxt UI
+
+Nuxt UI is already configured in the project. You can modify the app.config.ts to customize the look and feel of the components at runtime with HMR. Check out the [Nuxt UI docs](https://ui.nuxt.com/getting-started/theming)
