@@ -9,6 +9,7 @@ Welcome to the JimeBlue Boilerplate - Basic, a streamlined and efficient starter
 - **Nuxt UI**: Integrated with Nuxt UI for beautiful, ready-to-use components.
 - **Tailwind CSS**: Styled with Tailwind CSS for modern, utility-first design.
 - **Nuxt HeadlessUI Dialog**: Includes a dialog component using Nuxt HeadlessUI for accessible UI elements.
+- **i18n for Translations**: Supports internationalization with `@nuxtjs/i18n`, allowing seamless language switching between multiple locales..
 
 ## Getting Started
 
@@ -56,7 +57,6 @@ To build the project for production:
 yarn build
 # or
 npm run build
-
 ```
 
 The production-ready files will be in the .output folder.
@@ -74,3 +74,25 @@ Tailwind is already configured in the project. You can modify the tailwind.confi
 ### Nuxt UI
 
 Nuxt UI is already configured in the project. You can modify the app.config.ts to customize the look and feel of the components at runtime with HMR. Check out the [Nuxt UI docs](https://ui.nuxt.com/getting-started/theming)
+
+### i18n Setup
+
+This boilerplate uses `@nuxtjs/i18n` for internationalization. Currently, it includes support for English (en) and German (de), with lazy-loaded language files.
+
+You can add more languages or modify the existing ones by editing the `i18n` configuration in `nuxt.config.ts`:
+
+<br>
+```js
+i18n: {
+locales: [
+{ name: 'English', code: 'en', iso: 'en-GB', file: 'en.json' },
+{ name: 'Deutsch', code: 'de', iso: 'de-DE', file: 'de.json' },
+],
+defaultLocale: 'en',
+lazy: true,
+langDir: 'i18n/',
+strategy: 'prefix_except_default',
+}
+```
+<br>
+Add or update translation files in the `i18n/` folder.
