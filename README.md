@@ -1,3 +1,13 @@
+#
+
+```
+
+```
+
+```
+
+```
+
 # JimeBlue Boilerplate - Basic
 
 Welcome to the JimeBlue Boilerplate - Basic, a streamlined and efficient starter template for building client-side rendered (CSR) applications with Nuxt 3. This boilerplate is designed with simplicity in mind, featuring powerful tools that accelerate your development workflow.
@@ -81,8 +91,7 @@ This boilerplate uses `@nuxtjs/i18n` for internationalization. Currently, it inc
 
 You can add more languages or modify the existing ones by editing the `i18n` configuration in `nuxt.config.ts`:
 
-<br>
-```js
+```
 i18n: {
 locales: [
 { name: 'English', code: 'en', iso: 'en-GB', file: 'en.json' },
@@ -94,5 +103,5 @@ langDir: 'i18n/',
 strategy: 'prefix_except_default',
 }
 ```
-<br>
+
 Add or update translation files in the `i18n/` folder.
