@@ -1,16 +1,8 @@
-#
-
-```
-
-```
-
-```
-
-```
-
 # JimeBlue Boilerplate - Basic
 
 Welcome to the JimeBlue Boilerplate - Basic, a streamlined and efficient starter template for building client-side rendered (CSR) applications with Nuxt 3. This boilerplate is designed with simplicity in mind, featuring powerful tools that accelerate your development workflow.
+
+- Ceck it out 👀 [nuxt-3-boilerplate-basic-jime-blue.vercel.app](https://nuxt-3-boilerplate-basic-jime-blue.vercel.app/)
 
 ## Features
 
