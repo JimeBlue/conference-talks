@@ -3,7 +3,7 @@ export default defineNuxtConfig({
   ssr: false,
 
   devtools: { enabled: true },
-  css: ['~/assets/css/tailwind.css'],
+  css: ['~/assets/css/tailwind.css', 'assets/css/fonts.css'],
 
   app: {
     head: {
