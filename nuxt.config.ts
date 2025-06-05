@@ -7,7 +7,7 @@ export default defineNuxtConfig({
 
   app: {
     head: {
-      title: 'JimeBlue-boilerplate-basic',
+      title: 'Conference Talks 2025',
       meta: [
         { charset: 'utf-8' },
         { name: 'viewport', content: 'width=device-width, initial-scale=1' },
@@ -31,7 +31,7 @@ export default defineNuxtConfig({
     },
   },
 
-  modules: ['@nuxt/ui', '@nuxtjs/i18n', 'nuxt-svgo', 'nuxt-headlessui', 'nuxt-lodash'],
+  modules: ['@nuxt/ui', '@nuxtjs/i18n', 'nuxt-svgo', 'nuxt-headlessui', 'nuxt-lodash', '@pinia/nuxt'],
   i18n: {
     locales: [
       {
